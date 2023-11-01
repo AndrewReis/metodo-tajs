@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-import crypto from 'node:crypto';
 import fs from 'node:fs/promises';
 import fsSync from 'node:fs';
 
@@ -41,6 +39,7 @@ describe('# STUBS #', () => {
 
 				const result = await _service.read();
 
+				// eslint-disable-next-line no-unused-vars
 				const expected = dbData.map(({ password, ...rest }) => ({ ...rest }));
 
 				expect(result).toStrictEqual(expected);
